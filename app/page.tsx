@@ -32,10 +32,10 @@ const experience = [
     period: "Apr 2024 – Present",
     location: "United States · On-site",
     bullets: [
-      "Architected a cloud-agnostic API layer for MicroStrategy Cloud, streamlining deployment of containerized services across GCP, AWS, Azure, and VMware Tanzu — supporting Managed Cloud, Customer Managed Cloud, FedRAMP (AWS GovCloud), and on-premises environments.",
+      "Architected a cloud-agnostic API layer for MicroStrategy Cloud, streamlining deployment of containerized services across GCP, AWS, and Azure — supporting Managed Cloud, Customer Managed Cloud, FedRAMP (AWS GovCloud), and on-premises environments.",
       "Optimized account deployment workflows by identifying pain points and implementing AI-driven automation to dynamically generate CIDRs, enhancing efficiency and accuracy.",
     ],
-    skills: ["GCP", "AWS", "Azure", "VMware Tanzu"],
+    skills: ["GCP", "AWS", "Azure"],
   },
   {
     title: "Senior Software Engineer",
