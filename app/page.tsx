@@ -77,14 +77,14 @@ const experience = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white dark:bg-zinc-950 font-sans text-zinc-900 dark:text-zinc-100">
+    <div className="min-h-screen bg-white font-sans text-zinc-900">
       <div className="mx-auto max-w-3xl px-6 py-20">
 
         {/* Header */}
         <header className="mb-16">
           <h1 className="text-4xl font-bold tracking-tight mb-2">Fengwei Wang</h1>
-          <p className="text-xl text-zinc-500 dark:text-zinc-400 mb-6">Principal Software Engineer</p>
-          <p className="text-base leading-7 text-zinc-600 dark:text-zinc-400 max-w-2xl">
+          <p className="text-xl text-zinc-500 mb-6">Principal Software Engineer</p>
+          <p className="text-base leading-7 text-zinc-600 max-w-2xl">
             Experienced Principal Software Engineer with expertise in React, cloud-native architecture,
             full-stack development, and API design. Proven track record of leading cross-functional teams
             to deliver scalable, secure, and innovative software solutions.
@@ -94,7 +94,7 @@ export default function Home() {
               href="https://www.linkedin.com/in/fewang-hust/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 dark:text-blue-400 hover:underline"
+              className="text-blue-600 hover:underline"
             >
               LinkedIn
             </a>
@@ -103,7 +103,7 @@ export default function Home() {
 
         {/* Experience */}
         <section>
-          <h2 className="text-xs font-semibold uppercase tracking-widest text-zinc-400 dark:text-zinc-500 mb-8">
+          <h2 className="text-xs font-semibold uppercase tracking-widest text-zinc-400 mb-8">
             Experience
           </h2>
           <div className="space-y-12">
@@ -112,14 +112,14 @@ export default function Home() {
                 <div>
                   <div className="flex items-baseline gap-2 flex-wrap">
                     <h3 className="font-semibold text-lg">{job.title}</h3>
-                    <span className="text-zinc-500 dark:text-zinc-400">· {job.company}</span>
+                    <span className="text-zinc-500">· {job.company}</span>
                   </div>
-                  <p className="text-sm text-zinc-400 dark:text-zinc-500 mt-0.5 mb-4">
+                  <p className="text-sm text-zinc-400 mt-0.5 mb-4">
                     {job.period} · {job.location}
                   </p>
                   <ul className="space-y-2">
                     {job.bullets.map((b, j) => (
-                      <li key={j} className="text-sm leading-6 text-zinc-600 dark:text-zinc-400 pl-3 border-l border-zinc-200 dark:border-zinc-800">
+                      <li key={j} className="text-sm leading-6 text-zinc-600 pl-3 border-l border-zinc-200">
                         {b}
                       </li>
                     ))}
@@ -128,7 +128,7 @@ export default function Home() {
                     {job.skills.map((s) => (
                       <span
                         key={s}
-                        className="text-xs px-2 py-0.5 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400"
+                        className="text-xs px-2 py-0.5 rounded-full bg-zinc-100 text-zinc-600"
                       >
                         {s}
                       </span>
@@ -142,7 +142,7 @@ export default function Home() {
 
         {/* Patents */}
         <section className="mt-16">
-          <h2 className="text-xs font-semibold uppercase tracking-widest text-zinc-400 dark:text-zinc-500 mb-8">
+          <h2 className="text-xs font-semibold uppercase tracking-widest text-zinc-400 mb-8">
             Patents
           </h2>
           <div className="space-y-6">
@@ -156,10 +156,10 @@ export default function Home() {
                 >
                   {p.title}
                 </a>
-                <p className="text-sm text-zinc-400 dark:text-zinc-500 mt-0.5 mb-2">
+                <p className="text-sm text-zinc-400 mt-0.5 mb-2">
                   {p.number} · Issued {p.issued}
                 </p>
-                <p className="text-sm leading-6 text-zinc-600 dark:text-zinc-400">{p.abstract}</p>
+                <p className="text-sm leading-6 text-zinc-600">{p.abstract}</p>
               </div>
             ))}
           </div>
@@ -167,7 +167,7 @@ export default function Home() {
 
         {/* Education */}
         <section className="mt-16">
-          <h2 className="text-xs font-semibold uppercase tracking-widest text-zinc-400 dark:text-zinc-500 mb-8">
+          <h2 className="text-xs font-semibold uppercase tracking-widest text-zinc-400 mb-8">
             Education
           </h2>
           <div className="space-y-8">
@@ -175,17 +175,17 @@ export default function Home() {
               <div key={i}>
                 <div className="flex items-baseline gap-2 flex-wrap">
                   <h3 className="font-semibold">{edu.degree}</h3>
-                  <span className="text-zinc-500 dark:text-zinc-400">· {edu.field}</span>
+                  <span className="text-zinc-500">· {edu.field}</span>
                 </div>
-                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-0.5">{edu.school}</p>
-                <p className="text-sm text-zinc-400 dark:text-zinc-500 mt-0.5">{edu.period}</p>
+                <p className="text-sm text-zinc-500 mt-0.5">{edu.school}</p>
+                <p className="text-sm text-zinc-400 mt-0.5">{edu.period}</p>
               </div>
             ))}
           </div>
         </section>
 
-        <footer className="mt-16 pt-8 border-t border-zinc-200 dark:border-zinc-800">
-          <p className="text-xs text-zinc-400 dark:text-zinc-600">Last updated: May 2026</p>
+        <footer className="mt-16 pt-8 border-t border-zinc-200">
+          <p className="text-xs text-zinc-400">Last updated: May 2026</p>
         </footer>
 
       </div>
