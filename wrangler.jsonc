@@ -3,6 +3,13 @@
   "name": "www-fengwei-link",
   "compatibility_date": "2025-01-01",
   "compatibility_flags": ["nodejs_compat"],
-  "pages_build_output_dir": ".open-next/assets",
-  "main": ".open-next/worker.js"
+  "main": ".open-next/worker.js",
+  "routes": [
+    { "pattern": "fengwei.link/*", "zone_name": "fengwei.link" },
+    { "pattern": "www.fengwei.link/*", "zone_name": "fengwei.link" }
+  ],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  }
 }
