@@ -1,65 +1,190 @@
-import Image from "next/image";
+const patents = [
+  {
+    title: "Synchronized virtual trusted platform modules (VTPM) and virtual machine (VM) rollbacks",
+    number: "US 9,275,240 B2",
+    issued: "Mar 1, 2016",
+    url: "https://patents.google.com/patent/US9275240B2",
+    abstract:
+      "A method for secured rollback of a virtual Trusted Platform Module (vTPM) that renders available functionalities offered by TPM on a computer to a virtual machine (VM). The method takes and saves a snapshot of the current VM state and corresponding vTPM upon a snapshot request, then converts both snapshots back to current state upon a rollback request.",
+  },
+];
+
+const education = [
+  {
+    school: "Huazhong University of Science and Technology",
+    degree: "Master of Engineering (MEng)",
+    field: "Computer Architecture",
+    period: "2011 – 2014",
+  },
+  {
+    school: "Huazhong University of Science and Technology",
+    degree: "Bachelor of Science (BS)",
+    field: "Computer and Information Systems Security / Information Assurance",
+    period: "2007 – 2011",
+  },
+];
+
+const experience = [
+  {
+    title: "Principal Software Engineer",
+    company: "MicroStrategy",
+    type: "Full-time",
+    period: "Apr 2024 – Present",
+    location: "United States · On-site",
+    bullets: [
+      "Architected a cloud-agnostic API layer for MicroStrategy Cloud, streamlining deployment of containerized services across GCP, AWS, Azure, and VMware Tanzu — supporting Managed Cloud, Customer Managed Cloud, FedRAMP (AWS GovCloud), and on-premises environments.",
+      "Optimized account deployment workflows by identifying pain points and implementing AI-driven automation to dynamically generate CIDRs, enhancing efficiency and accuracy.",
+    ],
+    skills: ["GCP", "AWS", "Azure", "VMware Tanzu"],
+  },
+  {
+    title: "Senior Software Engineer",
+    company: "MicroStrategy",
+    type: "Full-time",
+    period: "Aug 2021 – Apr 2024",
+    location: "United States",
+    bullets: [
+      "Migrated legacy desktop application to a modern web-based SPA with an abstraction layer ensuring seamless compatibility across web browsers and CEF-based desktop applications.",
+      "Led design and implementation of the web GUI for MicroStrategy Cloud Console, delivering resource management, activity history, logging, and user management.",
+    ],
+    skills: ["React", "Redux", "Saga"],
+  },
+  {
+    title: "Software Engineer II",
+    company: "MicroStrategy",
+    type: "Full-time",
+    period: "Nov 2016 – Aug 2021",
+    location: "United States",
+    bullets: [
+      "Developed Workstation plugins leveraging web technologies integrated with Chromium Embedded Framework (CEF).",
+      "Designed and delivered 15+ plugins including job/cube/schedule monitors, user/cube editors, Application Management, and OIDC/LDAP integrations.",
+    ],
+    skills: ["CEF", "Redux", "JavaScript"],
+  },
+  {
+    title: "Software Engineer",
+    company: "MicroStrategy",
+    type: "Full-time",
+    period: "Apr 2014 – Nov 2016",
+    location: "Hangzhou, Zhejiang, China",
+    bullets: [
+      "Created the Usher Network Manager, a web-based GUI for MicroStrategy's Usher Mobile Identity Platform enabling secure mobile access, tracking, and analytics.",
+      "Delivered user management, badge management, gateway administration, and platform configuration.",
+    ],
+    skills: ["PHP", "JavaScript"],
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <div className="min-h-screen bg-white dark:bg-zinc-950 font-sans text-zinc-900 dark:text-zinc-100">
+      <div className="mx-auto max-w-3xl px-6 py-20">
+
+        {/* Header */}
+        <header className="mb-16">
+          <h1 className="text-4xl font-bold tracking-tight mb-2">Fengwei Wang</h1>
+          <p className="text-xl text-zinc-500 dark:text-zinc-400 mb-6">Principal Software Engineer</p>
+          <p className="text-base leading-7 text-zinc-600 dark:text-zinc-400 max-w-2xl">
+            Experienced Principal Software Engineer with expertise in React, cloud-native architecture,
+            full-stack development, and API design. Proven track record of leading cross-functional teams
+            to deliver scalable, secure, and innovative software solutions.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+          <div className="mt-6 flex gap-4 text-sm">
+            <a
+              href="https://www.linkedin.com/in/fewang-hust/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 dark:text-blue-400 hover:underline"
+            >
+              LinkedIn
+            </a>
+          </div>
+        </header>
+
+        {/* Experience */}
+        <section>
+          <h2 className="text-xs font-semibold uppercase tracking-widest text-zinc-400 dark:text-zinc-500 mb-8">
+            Experience
+          </h2>
+          <div className="space-y-12">
+            {experience.map((job, i) => (
+              <div key={i} className="grid grid-cols-[1fr_auto] gap-x-4">
+                <div>
+                  <div className="flex items-baseline gap-2 flex-wrap">
+                    <h3 className="font-semibold text-lg">{job.title}</h3>
+                    <span className="text-zinc-500 dark:text-zinc-400">· {job.company}</span>
+                  </div>
+                  <p className="text-sm text-zinc-400 dark:text-zinc-500 mt-0.5 mb-4">
+                    {job.period} · {job.location}
+                  </p>
+                  <ul className="space-y-2">
+                    {job.bullets.map((b, j) => (
+                      <li key={j} className="text-sm leading-6 text-zinc-600 dark:text-zinc-400 pl-3 border-l border-zinc-200 dark:border-zinc-800">
+                        {b}
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {job.skills.map((s) => (
+                      <span
+                        key={s}
+                        className="text-xs px-2 py-0.5 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400"
+                      >
+                        {s}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Patents */}
+        <section className="mt-16">
+          <h2 className="text-xs font-semibold uppercase tracking-widest text-zinc-400 dark:text-zinc-500 mb-8">
+            Patents
+          </h2>
+          <div className="space-y-6">
+            {patents.map((p, i) => (
+              <div key={i}>
+                <a
+                  href={p.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold hover:underline"
+                >
+                  {p.title}
+                </a>
+                <p className="text-sm text-zinc-400 dark:text-zinc-500 mt-0.5 mb-2">
+                  {p.number} · Issued {p.issued}
+                </p>
+                <p className="text-sm leading-6 text-zinc-600 dark:text-zinc-400">{p.abstract}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Education */}
+        <section className="mt-16">
+          <h2 className="text-xs font-semibold uppercase tracking-widest text-zinc-400 dark:text-zinc-500 mb-8">
+            Education
+          </h2>
+          <div className="space-y-8">
+            {education.map((edu, i) => (
+              <div key={i}>
+                <div className="flex items-baseline gap-2 flex-wrap">
+                  <h3 className="font-semibold">{edu.degree}</h3>
+                  <span className="text-zinc-500 dark:text-zinc-400">· {edu.field}</span>
+                </div>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-0.5">{edu.school}</p>
+                <p className="text-sm text-zinc-400 dark:text-zinc-500 mt-0.5">{edu.period}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+      </div>
     </div>
   );
 }
