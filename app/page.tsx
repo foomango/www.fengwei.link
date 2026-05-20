@@ -184,6 +184,10 @@ export default function Home() {
           </div>
         </section>
 
+        <footer className="mt-16 pt-8 border-t border-zinc-200 dark:border-zinc-800">
+          <p className="text-xs text-zinc-400 dark:text-zinc-600">Last updated: May 2026</p>
+        </footer>
+
       </div>
     </div>
   );
